@@ -1,0 +1,21 @@
+import time
+import random
+import pyfiglet as pf
+from pyfiglet import Figlet
+from termcolor import colored
+
+text = "Hello Panellist"
+color_list = ['red', 'green', 'blue', 'yellow']
+data_list = []
+with open('texts.txt') as f:
+    data_list = [line.strip() for line in f]
+hello_panellist_art = pf.figlet_format(text)
+
+for i in range(0, 10):
+    if i % 2 == 0:
+        f = Figlet(font=random.choice(data_list))
+        text_art = colored(f.renderText(text), random.choice(color_list))
+    else:
+        text_art = hello_panellist_art
+    print("\n", text_art)
+    time.sleep(1)
