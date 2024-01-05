@@ -4,7 +4,7 @@ import pyfiglet as pf
 from pyfiglet import Figlet
 from termcolor import colored
 
-text = "Hello Panellist"
+text = "Hello Panellist Elon"
 color_list = ['red', 'green', 'blue', 'yellow']
 data_list = []
 with open('texts.txt') as f:
